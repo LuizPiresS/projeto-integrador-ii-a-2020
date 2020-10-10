@@ -39,7 +39,7 @@ class App { // Declaração da classe App
     this.io.on('connection', (socket: any) => {
       console.log('Usuário conectado')
 
-      socket.on('chat message', (m: any) => {
+      socket.on('chat message', (m: any) => { // tanto os eventos aqui quanto no index.html devem ter o mesmo nome
         this.io.emit('chat message', m)
       })
 
